@@ -77,11 +77,13 @@ def second_pass(answer)
     start
   end
   puts "What is the second number?"
-  number_2 = gets.to_f
+  number_2 = gets.strip
   if /quit/.match(number_2)
     exit
+  else
+    num2f = number_2.to_f
   end
-  calculator(answer, number_2, operator)
+  calculator(answer, num2f, operator)
 end
 
 start
